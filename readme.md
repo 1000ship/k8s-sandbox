@@ -19,3 +19,10 @@
   - Replication Controller로 만들어진 것은 환경변수 적용이 안된다.
   - Dockerfile 에서 설정한 환경변수 값은 Kubernetes 에서 설정한 환경변수에 의해 덮혀 쓰여진다.
   - Service 에서 ClusterIP 로는 외부 아이피 노출이 안됐다. 대상이 1개라도 LoadBalancer를 통해서만 ExternalIP 설정이 가능했다.
+
+## #3 job (2021. 02. 11.)
+
+- Job 예제를 사용해 출력된 결과 값 확인까지 해본다.
+- Python으로 환경변수 FIRST_VALUE, SECOND_VALUE 값을 받아 합을 출력하는 프로그램을 만들고 Job으로 실행해본다.
+- 일단, 입력을 환경변수로 받고 출력은 `kubectl logs <pod-name>`으로 구했다.
+- 모니터링을 통해 종료된 Job을 인지하고 다음 순서로 넘기는 방법으로 하면 될 것 같다.
