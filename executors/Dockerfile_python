@@ -1,0 +1,3 @@
+FROM python:3.9-slim-buster
+
+CMD date +%s%N; python $SOURCE_FILE < $INPUT_FILE; date +%s%N;
