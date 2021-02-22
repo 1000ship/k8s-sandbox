@@ -26,3 +26,10 @@
 - Python으로 환경변수 FIRST_VALUE, SECOND_VALUE 값을 받아 합을 출력하는 프로그램을 만들고 Job으로 실행해본다.
 - 일단, 입력을 환경변수로 받고 출력은 `kubectl logs <pod-name>`으로 구했다.
 - 모니터링을 통해 종료된 Job을 인지하고 다음 순서로 넘기는 방법으로 하면 될 것 같다.
+
+## #4 executors (2021. 02. 21.)
+
+- Docker Hub에 있는 GCC, Python, Ruby, Openjdk를 활용하여 C, C++, Python, Ruby, Java 프로그램을 실행하여 결과 값을 도출해내는 이미지를 만든다. 실행 시간을 측정하기위해 실행 전후로 `date`로 시간을 찍어낸다.
+- 소스코드, 입력 값은 Persistant Volume을 연결하여 사용토록한다.
+- 출력 값은 `kubectl logs <pod-name>`으로 얻는다.
+- 이는 Solvit Online Judge 프로그램으로 사용할 겸 만들었다.
