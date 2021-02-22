@@ -1,3 +1,3 @@
 FROM ruby:3.0.0-slim-buster
 
-CMD date +%s%N; ruby $SOURCE_FILE < $INPUT_FILE; date +%s%N;
+CMD date +%s%N; ruby $SOURCE_FILE < $INPUT_FILE; echo; date +%s%N;

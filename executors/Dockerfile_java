@@ -1,3 +1,3 @@
 FROM openjdk:17-alpine
 
-CMD cp $SOURCE_FILE Main.java; javac Main.java; date +%s%N; java Main < $INPUT_FILE; date +%s%N;
+CMD cp $SOURCE_FILE Main.java; javac Main.java; date +%s%N; java Main < $INPUT_FILE; echo; date +%s%N;
